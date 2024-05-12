@@ -1,19 +1,23 @@
 import Link from "next/link";
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter, usePathname } from "next/navigation";
 
-const navLinks = [
-  { title: "What we do", href: "/" },
-  { title: "How it works", href: "/" },
-  { title: "Case studies", href: "/" },
-  { title: "About", href: "/" },
-  { title: "Contact", href: "/" },
-];
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [toggleHotelsState, setToggleHotelsState] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
+  };
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToContact = () => {
+    if (pathname !== "/") {
+      router.push("/#contact");
+    } else {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const toggleHotels = () => {
@@ -57,78 +61,90 @@ const Navbar = () => {
 
   return (
     <header className="w-full">
-      <nav className="flex justify-between items-center py-4 lg:py-4 px-6 bg-white rounded-full">
+      <nav className="flex lg:flex-col justify-between lg:justify-center items-center py-4 lg:py-6 px-6 bg-white">
         <div className="flex items-center gap-[1ch]">
-          <img
-            src="/assets/logo.png"
-            width={"100%"}
-            height={"auto"}
-            alt="logo"
-            className="w-20 lg:w-32 lg:ml-4"
-          />
+          <Link href="/">
+            <img
+              src="/assets/logo.png"
+              width={"100%"}
+              height={"auto"}
+              alt="logo"
+              className="w-20 lg:w-36 xl:w-40 lg:ml-4"
+            />
+          </Link>
         </div>
-        <div className="hidden lg:flex items-center space-x-8">
-          <ul className="menu lg:menu-horizontal rounded-box">
-            <li>
-              <details>
-                <summary className="font-dmSans text-[16px] hover:bg-white">
-                  HOTELS
-                </summary>
-                <ul className="w-max">
-                  <li className="hover:bg-primaryButton hover:text-white rounded-lg">
-                    <Link
-                      href="/hilton-al-habtoor-city"
-                      className="font-dmSans text-lg"
-                    >
-                      Hilton Al Habtoor City
-                    </Link>
-                  </li>
-                  <li className="hover:bg-primaryButton hover:text-white rounded-lg">
-                    <Link
-                      href="/habtoor-palace"
-                      className="font-dmSans text-lg"
-                    >
-                      Habtoor Palace
-                    </Link>
-                  </li>
-                  <li className="hover:bg-primaryButton hover:text-white rounded-lg">
-                    <Link href="/v-hotel" className="font-dmSans text-lg">
-                      V Hotel
-                    </Link>
-                  </li>
-                  <li className="hover:bg-primaryButton hover:text-white rounded-lg">
-                    <Link href="/habtoor-grand" className="font-dmSans text-lg">
-                      Habtoor Grand
-                    </Link>
-                  </li>
-                  <li className="hover:bg-primaryButton hover:text-white rounded-lg">
-                    <Link href="/the-mirage" className="font-dmSans text-lg">
-                      The Mirage
-                    </Link>
-                  </li>
-                  <li className="hover:bg-primaryButton hover:text-white rounded-lg">
-                    <Link
-                      href="/metropolitan-hotel"
-                      className="font-dmSans text-lg"
-                    >
-                      Metropolitan Hotel
-                    </Link>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li className="rounded-lg">
-              <Link
-                href="/#contact"
-                className="font-dmSans text-[16px] hover:bg-white"
-              >
-                CONTACT
-              </Link>
-            </li>
-          </ul>
-          <button className="hidden lg:block text-[16px] hover:opacity-90 py-2 px-4 bg-primaryButton text-white rounded-full">
-            Book Now
-          </button>
+        <div className="hidden lg:flex items-center space-x-8 mt-8">
+          <div className="dropdown dropdown-hover">
+            <div
+              tabIndex={0}
+              role="button"
+              className="flex items-center gap-x-1 font-dmSans text-[16px] hover:bg-white text-primaryButton"
+            >
+              Hotels
+              <img
+                src="/assets/dropdown.svg"
+                alt="dropdown icon"
+                className="w-2 h-2 mt-1"
+              />
+            </div>
+            <ul
+              tabIndex={0}
+              className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-max"
+            >
+              <li className="hover:bg-primaryButton hover:text-white rounded-lg">
+                <Link
+                  href="/hilton-al-habtoor-city"
+                  className="font-dmSans text-lg"
+                >
+                  Hilton Al Habtoor City
+                </Link>
+              </li>
+              <li className="hover:bg-primaryButton hover:text-white rounded-lg">
+                <Link href="/habtoor-palace" className="font-dmSans text-lg">
+                  Habtoor Palace
+                </Link>
+              </li>
+              <li className="hover:bg-primaryButton hover:text-white rounded-lg">
+                <Link href="/v-hotel" className="font-dmSans text-lg">
+                  V Hotel
+                </Link>
+              </li>
+              <li className="hover:bg-primaryButton hover:text-white rounded-lg">
+                <Link href="/habtoor-grand" className="font-dmSans text-lg">
+                  Habtoor Grand
+                </Link>
+              </li>
+              <li className="hover:bg-primaryButton hover:text-white rounded-lg">
+                <Link href="/the-mirage" className="font-dmSans text-lg">
+                  The Mirage
+                </Link>
+              </li>
+              <li className="hover:bg-primaryButton hover:text-white rounded-lg">
+                <Link
+                  href="/metropolitan-hotel"
+                  className="font-dmSans text-lg"
+                >
+                  Metropolitan Hotel
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-lg">
+            <span
+              onClick={scrollToContact}
+              className="font-dmSans text-[16px] hover:bg-white text-primaryButton cursor-pointer"
+            >
+              Contact
+            </span>
+          </div>
+          <div className="rounded-lg">
+            <Link
+              href="/booking"
+              className="font-dmSans text-[16px] hover:bg-white text-primaryButton [active:bg-white]"
+            >
+              Book Now
+            </Link>
+          </div>
         </div>
         <div
           className="cursor-pointer lg:hidden text-md text-black"
@@ -150,10 +166,10 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 w-full h-screen origin-top bg-black text-white p-10"
+            className="z-20 absolute left-0 top-0 w-full h-screen origin-top bg-black text-white p-10"
           >
             <div className="flex h-full flex-col">
-              <div className="flex justify-end rounded-full border-white border-[1px] border-solid py-1 px-4">
+              <div className="flex justify-end rounded-full py-1 px-4">
                 <button onClick={toggleMenu}>
                   <svg
                     width="32px"
@@ -187,7 +203,7 @@ const Navbar = () => {
                 initial="initial"
                 animate="open"
                 exit="initial"
-                className="flex flex-col h-full mt-24 font-lora items-center gap-4 gap-y-6"
+                className="z-20 flex flex-col h-screen mt-24 font-lora items-center gap-4 gap-y-6"
               >
                 <div className="overflow-hidden">
                   <motion.div
@@ -211,7 +227,7 @@ const Navbar = () => {
                     variants={mobileLinkVars}
                     className="text-3xl font-dmSans font-semibold uppercase text-white"
                   >
-                    <Link href="/#contact">Contact</Link>
+                    <span onClick={scrollToContact}>Contact</span>
                   </motion.div>
                 </div>
               </motion.div>
@@ -224,10 +240,10 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 w-full h-screen origin-top bg-black text-white p-10"
+            className="absolute z-20 left-0 top-0 w-full h-screen origin-top bg-black text-white p-10"
           >
             <div className="flex h-full flex-col">
-              <div className="flex justify-end rounded-full border-white border-[1px] border-solid py-1 px-4">
+              <div className="flex justify-end py-1 px-4">
                 <button onClick={toggleMenu}>
                   <svg
                     width="32px"
@@ -287,7 +303,7 @@ const Navbar = () => {
                 initial="initial"
                 animate="open"
                 exit="initial"
-                className="flex flex-col h-full mt-24 font-lora items-center gap-4 gap-y-6"
+                className="z-24 flex flex-col h-full mt-24 font-lora items-center gap-4 gap-y-6"
               >
                 <div className="overflow-hidden">
                   <motion.div
