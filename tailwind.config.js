@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  daisyui: {
+    darkTheme: false,
+  },
   darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,10 +13,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryButton: "#193260",
+        primaryButton: "#0766AD",
+        containerColor: "#F3F3F3",
       },
       fontFamily: {
         dmSans: '"DM Sans", sans-serif',
+        ptSerif: '"PT Serif", serif',
       },
     },
   },
