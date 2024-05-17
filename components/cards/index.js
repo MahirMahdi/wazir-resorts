@@ -101,10 +101,10 @@ export function DetailAccordion({
         {pricesList && (
           <div className="w-full">
             <strike className="font-dmSans text-sm text-[15px] lg:text-[18px] font-normal">
-              ${roundUpToNearestInteger(pricesList?.OriginalPrice)}
+              £{roundUpToNearestInteger(pricesList?.OriginalPrice)}
             </strike>
             <p className="font-dmSans text-lg text-[20px] lg:text-[24px] font-semibold">
-              ${roundUpToNearestInteger(pricesList?.DiscountedPrice)}
+              £{roundUpToNearestInteger(pricesList?.DiscountedPrice)}
             </p>
             <span className="w-max text-xs rounded-lg bg-[#C5E898] font-medium font-dmSans py-[5px] px-[7px]">
               {calculatePercentage(pricesList?.DiscountRate)}% OFF

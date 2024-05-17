@@ -18,7 +18,7 @@ export default function Checkout() {
     "client-id": "test",
     "enable-funding": "",
     "disable-funding": "venmo",
-    currency: "USD",
+    currency: "GBP",
     "data-page-type": "product-details",
     components: "buttons",
     "data-sdk-integration-source": "developer-studio",

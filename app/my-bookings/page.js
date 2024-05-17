@@ -181,7 +181,7 @@ export default function BookingPage() {
                           toggleClassName="hidden absolute right-1 lg:right-4"
                         />
                       </td>
-                      <td className="font-semibold">${item.total_price}</td>
+                      <td className="font-semibold">£{item.total_price}</td>
                       <td>
                         <button onClick={() => removeItem(i)} className="p-2">
                           <svg
@@ -217,7 +217,7 @@ export default function BookingPage() {
                     <th></th>
                     <th className="text-primaryButton text-[14px]">Total</th>
                     <th className="font-bold text-lg text-black">
-                      ${calculateTotalPrices(bookingState.items)}
+                      £{calculateTotalPrices(bookingState.items)}
                     </th>
                     <th></th>
                   </tr>
@@ -289,7 +289,7 @@ export default function BookingPage() {
                           </svg>
                         </button>
                       </td>
-                      <td className="font-semibold">${item.total_price}</td>
+                      <td className="font-semibold">£{item.total_price}</td>
                       <td>
                         <button onClick={() => removeItem(i)} className="p-2">
                           <svg
@@ -430,7 +430,7 @@ export default function BookingPage() {
                     <th></th>
                     <th className="text-primaryButton text-[14px]">Total</th>
                     <th className="font-bold text-lg text-black">
-                      ${calculateTotalPrices(bookingState.items)}
+                      £{calculateTotalPrices(bookingState.items)}
                     </th>
                   </tr>
                 </tfoot>
