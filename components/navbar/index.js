@@ -2,6 +2,7 @@ import Link from "next/link";
 import { React, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
+import { useBookingStore } from "@/providers/bookingProvider";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -9,6 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
+  const bookingState = useBookingStore((state) => state.bookingState);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -60,8 +62,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full">
-      <nav className="flex lg:flex-col justify-between lg:justify-center items-center py-4 lg:py-6 px-6 bg-white">
+    <header className="w-full shadow">
+      <nav className="w-full flex lg:flex-col justify-between lg:justify-center items-center py-4 lg:py-6 px-6 bg-white">
         <div className="flex items-center gap-[1ch]">
           <Link href="/">
             <img
@@ -137,26 +139,62 @@ const Navbar = () => {
               Contact
             </span>
           </div>
-          <div className="rounded-lg">
+          <div className="indicator rounded-lg">
+            <span className="indicator-item badge bg-[#C5E898] font-dmSans">
+              {bookingState.items.length}
+            </span>
             <Link
-              href="/booking"
+              href="/my-bookings"
               className="font-dmSans text-[16px] hover:bg-white text-primaryButton [active:bg-white]"
             >
-              Book Now
+              My Bookings
             </Link>
           </div>
         </div>
-        <div
-          className="cursor-pointer lg:hidden text-md text-black"
-          onClick={toggleMenu}
-        >
-          <img
-            src="/assets/menu.png"
-            width={"100%"}
-            height={"auto"}
-            alt="menu icon"
-            className="w-[32px]"
-          />
+        <div className="flex items-center space-x-4 lg:hidden">
+          <div className="indicator">
+            <span className="indicator-item badge bg-[#C5E898] font-dmSans">
+              {bookingState.items.length}
+            </span>
+            <Link href="/my-bookings">
+              <svg
+                width="26px"
+                height="26px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path
+                    d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                    stroke="#000000"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />{" "}
+                </g>
+              </svg>
+            </Link>
+          </div>
+          <div
+            className="cursor-pointer lg:hidden text-md text-black"
+            onClick={toggleMenu}
+          >
+            <img
+              src="/assets/menu.png"
+              width={"100%"}
+              height={"auto"}
+              alt="menu icon"
+              className="w-[32px]"
+            />
+          </div>
         </div>
       </nav>
       <AnimatePresence>
@@ -210,7 +248,7 @@ const Navbar = () => {
                     variants={mobileLinkVars}
                     className="text-3xl font-dmSans font-semibold uppercase text-white"
                   >
-                    <Link href="/booking">Booking</Link>
+                    <Link href="/my-bookings">My Bookings</Link>
                   </motion.div>
                 </div>
                 <div className="overflow-hidden">

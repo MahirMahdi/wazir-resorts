@@ -1,33 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h1 {
+  letter-spacing: -30;
+  line-height: 100%;
+  font-size: 64px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.collapse-arrow > .collapse-title:after {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h2 {
+  line-height: 100%;
+  font-size: 36px;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+button {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1023px) {
+  h1 {
+    letter-spacing: -30;
+    line-height: 110%;
+    font-size: 36px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
   }
 }

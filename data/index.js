@@ -9,6 +9,25 @@ export const hilton = {
         "/assets/Hilton Al Habtoor City/Executive King/03.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          85 sq. m./914 sq. ft., separate living room, executive benefits,
+          complimentary WiFi, HDTVs Experience a memorable stay in the spacious
+          King Executive Suite which features a separate living room and private
+          bedroom with one king bed.
+          <br />
+          <br />
+          During your stay enjoy access to the Executive Lounge with a range of
+          benefits including complimentary breakfast and refreshments. Stay
+          connected with complimentary WiFi or relax in the living room and
+          watch the 48-inch HDTV. <br />
+          <br />
+          Refresh in the elegant en-suite bathroom which features a freestanding
+          bathtub and separate walk-in shower. There is also a guest bath for
+          your convenience. Other amenities include a mini refrigerator, safe,
+          and espresso machine.
+        </p>
+      ),
     },
     {
       name: "King One-Bedroom Grand Canal",
@@ -20,6 +39,25 @@ export const hilton = {
         "/assets/Hilton Al Habtoor City/Grand Canal Suite/05.jpg",
       ],
       discount: 35,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          168 sq. m./1808 sq. ft., living/dining rooms, pantry, executive
+          benefits, complimentary WiFi Perfect for entertaining, this elegant
+          suite boasts a range of spaces including a private king bedroom,
+          separate living room, dining room seating 10 guests, a pantry, and a
+          bar counter.
+          <br />
+          <br /> During your stay enjoy access to the Executive Lounge with a
+          range of benefits including complimentary breakfast and refreshments.
+          Stay connected with complimentary WiFi or relax and watch the 48-inch
+          HDTV.
+          <br />
+          <br /> Refresh in the stylish en-suite bathroom which features a
+          freestanding bathtub and separate walk-in shower. Other amenities
+          include a mini refrigerator, safe, and espresso machine. Connecting
+          rooms are guaranteed.
+        </p>
+      ),
     },
     {
       name: "King One Bedroom Panoramic View",
@@ -33,6 +71,25 @@ export const hilton = {
         "/assets/Hilton Al Habtoor City/King One Bedroom Panoramic View/07.jpeg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          102 sq. m./1097 sq. ft., living room, playroom, executive benefits,
+          complimentary WiFi, HDTVs Ideal for families, this suite boasts a
+          master king bedroom with en-suite, a children&apos;s playroom, and a
+          separate living room. <br />
+          <br />
+          During your stay enjoy access to the Executive Lounge with a range of
+          benefits including complimentary breakfast and refreshments. Stay
+          connected with complimentary WiFi or relax in the living room and
+          watch the 48-inch HDTV.
+          <br />
+          <br />
+          Refresh in the elegant bathroom which features a freestanding bathtub
+          and separate walk-in shower. Other amenities include a mini
+          refrigerator, safe, and espresso machine. Rollaway beds are available
+          for the children. Book from AED 1,472King One Bedroom Panoramic Suite,
+        </p>
+      ),
     },
     {
       name: "Junior Suite",
@@ -43,6 +100,22 @@ export const hilton = {
         "/assets/Hilton Al Habtoor City/Junior King Suite/04.jpg",
       ],
       discount: 20,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          65 sq. m./699 sq. ft., living area, executive benefits, complimentary
+          WiFi, 48-inch HDTV Unwind in the spacious King Junior Suite which
+          features a living area and comfortable king bed.
+          <br />
+          <br /> During your stay enjoy access to the Executive Lounge with a
+          range of benefits including complimentary breakfast and refreshments.
+          Stay connected with complimentary WiFi or relax in the seating area
+          and watch the 48-inch HDTV. <br />
+          <br />
+          Refresh in the elegant bathroom which features a freestanding bathtub
+          and separate walk-in shower. Other amenities include a mini
+          refrigerator, safe, and espresso machine.
+        </p>
+      ),
     },
   ],
   gridImages: [
@@ -78,6 +151,18 @@ export const theMirage = {
         "/assets/The Mirage/Executive Suite/07.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          The four-bedroom Royal Villas offer sky-high paradises and superb
+          views while functioning as private two and three-story estates.
+          Beautiful marble flooring and elegant furnishing adorn the villas and
+          space is further enhanced with large, royal windows that overlook the
+          landscaped polo fields. All villas have a private pool. Our customer
+          service office provides our members with seamless service, as well as
+          transportation to and from the Dubai airport, Dubai Emirates Mall, and
+          Andreea&apos;s Beach.
+        </p>
+      ),
     },
     {
       name: "Royal Suite",
@@ -94,6 +179,18 @@ export const theMirage = {
         "/assets/The Mirage/Royal Suite/10.jpg",
       ],
       discount: 35,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          The four-bedroom Royal Villas offer sky-high paradises and superb
+          views while functioning as private two and three-story estates.
+          Beautiful marble flooring and elegant furnishing adorn the villas and
+          space is further enhanced with large, royal windows that overlook the
+          landscaped polo fields. All villas have a private pool. Our customer
+          service office provides our members with seamless service, as well as
+          transportation to and from the Dubai airport, Dubai Emirates Mall, and
+          Andreea&apos;s Beach.
+        </p>
+      ),
     },
     {
       name: "Four-Bedroom Villa",
@@ -106,9 +203,20 @@ export const theMirage = {
         "/assets/The Mirage/Four-Bedroom Villa/06.jpg",
         "/assets/The Mirage/Four-Bedroom Villa/07.jpg",
         "/assets/The Mirage/Four-Bedroom Villa/08.jpg",
-        "/assets/The Mirage/Four-Bedroom Villa/09.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          The four-bedroom Royal Villas offer sky-high paradises and superb
+          views while functioning as private two and three-story estates.
+          Beautiful marble flooring and elegant furnishing adorn the villas and
+          space is further enhanced with large, royal windows that overlook the
+          landscaped polo fields. All villas have a private pool. Our customer
+          service office provides our members with seamless service, as well as
+          transportation to and from the Dubai airport, Dubai Emirates Mall, and
+          Andreea&apos;s Beach.
+        </p>
+      ),
     },
     {
       name: "Junior Suite",
@@ -122,6 +230,18 @@ export const theMirage = {
         "/assets/The Mirage/Junior Suite/07.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          The four-bedroom Royal Villas offer sky-high paradises and superb
+          views while functioning as private two and three-story estates.
+          Beautiful marble flooring and elegant furnishing adorn the villas and
+          space is further enhanced with large, royal windows that overlook the
+          landscaped polo fields. All villas have a private pool. Our customer
+          service office provides our members with seamless service, as well as
+          transportation to and from the Dubai airport, Dubai Emirates Mall, and
+          Andreea&apos;s Beach.
+        </p>
+      ),
     },
   ],
   gridImages: [
@@ -155,11 +275,35 @@ export const metropolitanHotel = {
         "/assets/Metropolitan Hotel/Ambassador Suite/04.jpg",
       ],
       discount: 20,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          The largest of The Metropolitan Hotel Dubai’s suites at 85 Sqm, this
+          is ideal for families and guests seeking plenty of space to rest and
+          play. <br />
+          <br />
+          Amenities include a 42” flat screen TV, king size bed, extra bed upon
+          request, One Touch phone service, individually controlled
+          air-conditioning, tea & coffee making facilities and turndown and
+          laundry service.
+        </p>
+      ),
     },
     {
       name: "Deluxe Room",
       images: ["/assets/Metropolitan Hotel/Deluxe Room/01.jpg"],
       discount: 20,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Our spacious Deluxe Rooms come complete with a range of amenities
+          including 42” flat screen TV, twin or king size beds, One Touch phone
+          service, individually controlled air-conditioning, tea & coffee making
+          facilities and turndown and laundry service.
+          <br />
+          <br />
+          All have either views of the Sheikh Zayed Road or across Jumeirah to
+          the Burj Al Arab. Both smoking and non- smoking rooms are available.
+        </p>
+      ),
     },
     {
       name: "Deluxe Suite",
@@ -173,6 +317,18 @@ export const metropolitanHotel = {
         "/assets/Metropolitan Hotel/Deluxe Suite/07.jpg",
       ],
       discount: 20,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          From 67 sqm. Deluxe Suites, all offer a fresh and bright feel to their
+          added living space. Rooms are available with an extra bed upon
+          request.
+          <br />
+          <br />
+          Amenities include a 42” flat screen TV, king size bed, One Touch phone
+          service, individually controlled air-conditioning, tea & coffee making
+          facilities and turndown and laundry service.
+        </p>
+      ),
     },
     {
       name: "Family Suite",
@@ -183,6 +339,19 @@ export const metropolitanHotel = {
         "/assets/Metropolitan Hotel/Family Suite/04.jpg",
       ],
       discount: 20,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Our Family Rooms offer two Deluxe Rooms with interconnecting doors –
+          with the option of twin or king size beds in each. Rooms come complete
+          with a host of amenities including 42” flat screen TV, One Touch phone
+          service, individually controlled air-conditioning, tea & coffee making
+          facilities and turndown and laundry service.
+          <br />
+          <br />
+          All have either views of the Courtyard, Sheikh Zayed Road or across
+          Jumeirah to the Burj Al Arab. All Family Rooms are non-smoking.
+        </p>
+      ),
     },
   ],
   gridImages: [
@@ -208,30 +377,75 @@ export const habtoorPalace = {
       name: "Ambassador Suite",
       images: [
         "/assets/Habtoor Palace/Ambassador Suite/02.jpg",
-        "/assets/Habtoor Palace/Ambassador Suite/01.png",
+
         "/assets/Habtoor Palace/Ambassador Suite/03.jpg",
       ],
       discount: 35,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          90 sq. m./968 sq. ft., living room, bath & shower, walk-in closet,
+          complimentary WiFi. <br />
+          <br />
+          Exuding elegance, the Ambassador Suite features sophisticated
+          interiors in its private bedroom, with one king-sized bed, a separate
+          living room, and walk-in closet. Refresh in the stylish bathroom
+          featuring a separate bathtub and walk-in shower.
+          <br />
+          <br />
+          Amenities include an espresso machine, 48-inch HDTV, minibar and safe.
+          Stay connected throughout your stay with complimentary WiFi.
+        </p>
+      ),
     },
     {
       name: "Duchesse Suite",
       images: [
         "/assets/Habtoor Palace/Duchesse Suite/02.jpg",
-        "/assets/Habtoor Palace/Duchesse Suite/01.png",
         "/assets/Habtoor Palace/Duchesse Suite/03.jpg",
         "/assets/Habtoor Palace/Duchesse Suite/04.jpg",
       ],
       discount: 35,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          195 sq. m./2098 sq. ft., living room, dining area, bath & shower,
+          walk-in closet.
+          <br />
+          <br />
+          Luxuriate in the spacious Duchess Suite which boasts a living room
+          with dining table for four guests and a private bedroom, with a
+          sumptuous king-sized bed and walk-in closet. Refresh in the stylish
+          bathroom featuring a separate bathtub and walk-in shower.
+          <br />
+          <br />
+          Amenities include an espresso machine, two HDTVs, minibar and safe.
+          Stay connected throughout your stay with complimentary WiFi.
+        </p>
+      ),
     },
     {
       name: "Empire Suite",
       images: [
         "/assets/Habtoor Palace/Empire Suite/02.jpg",
-        "/assets/Habtoor Palace/Empire Suite/01.png",
         "/assets/Habtoor Palace/Empire Suite/03.jpg",
         "/assets/Habtoor Palace/Empire Suite/04.jpg",
       ],
       discount: 35,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          110 sq. m./1184 sq. ft., living room, dining area, bath & shower,
+          walk-in closet. <br />
+          <br />
+          A true haven, the Empire Suite offers a sophisticated
+          home-away-from-home experience. The living room features comfortable
+          seating and a dining area while the private bedroom has a luxurious
+          king-sized bed and a walk-in closet. Refresh in the stylish bathroom
+          featuring a separate bathtub and walk-in shower.
+          <br />
+          <br />
+          Amenities include an espresso machine, two HDTVs, minibar and safe.
+          Stay connected throughout your stay with complimentary WiFi.
+        </p>
+      ),
     },
     {
       name: "Grand Suite",
@@ -243,6 +457,21 @@ export const habtoorPalace = {
         "/assets/Habtoor Palace/Grand Suite/05.jpg",
       ],
       discount: 40,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          295 sq. m./3175 sq. ft., spa room, office, living/dining room, TV
+          room, bath & shower. <br />
+          <br />
+          Experience a residential retreat in the luxurious Grand Suite. This
+          suite features a range of spaces including a spa room for private
+          treatments, a TV room, an office and a living area, complete with
+          dining room for eight guests. The elegant bathroom boasts a separate
+          bathtub and walk-in shower. <br />
+          <br />
+          Amenities include an espresso machine, HDTVs, minibar and safe. Stay
+          connected throughout your stay with complimentary WiFi.
+        </p>
+      ),
     },
     {
       name: "Royal Suite",
@@ -253,6 +482,24 @@ export const habtoorPalace = {
         "/assets/Habtoor Palace/Royal Suite/04.jpg",
       ],
       discount: 45,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          358 sq. m./3853 sq. ft., spa & steam room, round bathtub, living room,
+          dining room.
+          <br />
+          <br />
+          Experience an unforgettable stay in the luxurious Royal Suite, a
+          spacious retreat with a range of elegant spaces. Pamper yourself with
+          a private treatment in the spa room with steam room or relax in the
+          unique circular bathtub. The living and dining rooms are perfect for
+          entertaining while the private bedroom features a plush king-sized
+          bed.
+          <br />
+          <br />
+          Amenities include an espresso machine, HDTVs, minibar and safe. Stay
+          connected throughout your stay with complimentary WiFi.
+        </p>
+      ),
     },
   ],
   gridImages: [
@@ -287,6 +534,13 @@ export const vHotel = {
         "/assets/V Hotel/Deluxe/03.jpg",
       ],
       discount: 20,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Defy the ordinary, redefine the status quo of hotel stays. The
+          generous layout features a lounge area with bar, separate bedroom,
+          walk-in closet.
+        </p>
+      ),
     },
     {
       name: "Grand Deluxe Suite",
@@ -296,6 +550,13 @@ export const vHotel = {
         "/assets/V Hotel/Grand Deluxe/03.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Break down conventional and stay in style. This suite has an
+          entertainment room with a lounge and a bar, perfect to feel the city
+          vibe.
+        </p>
+      ),
     },
     {
       name: "Penthouse Suite",
@@ -311,6 +572,13 @@ export const vHotel = {
         "/assets/V Hotel/Penthouse/09.jpg",
       ],
       discount: 40,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Above the rest is where you should be — Party in our huge lounge
+          overlooking the city with a DJ area, stage, jacuzzi, steam room and
+          more.
+        </p>
+      ),
     },
     {
       name: "Mega Suite",
@@ -323,6 +591,12 @@ export const vHotel = {
         "/assets/V Hotel/Mega/06.jpg",
       ],
       discount: 40,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Escalate your expectations to extraordinary levels. Host a stylish
+          dinner with flair in the dining and bar area.
+        </p>
+      ),
     },
     {
       name: "Vibrant Suite",
@@ -334,6 +608,13 @@ export const vHotel = {
         "/assets/V Hotel/Vibrant/05.jpg",
       ],
       discount: 40,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          For our fashionistas that love walk-in closets and city views. This
+          suite has a lounge & bar, kitchenette, powder room, and cigar room. Oh
+          and that view!
+        </p>
+      ),
     },
     {
       name: "Valor Suite",
@@ -346,6 +627,12 @@ export const vHotel = {
         "/assets/V Hotel/Valor/06.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          This suite is only for height lovers. Fantastic city skyline views and
+          an inspired open space with our signature round bed, lounge and bar.
+        </p>
+      ),
     },
     {
       name: "Vantage Suite",
@@ -358,6 +645,12 @@ export const vHotel = {
         "/assets/V Hotel/Vantage/06.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          The suite life has different shapes, and ours is round. Sleep in our
+          signature round bed with a separate lounge and bar area.
+        </p>
+      ),
     },
   ],
   gridImages: [
@@ -396,6 +689,15 @@ export const habtoorGrand = {
         "/assets/Habtoor Grand/Club Oceanfront King/10.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Club level, Guest room, 1 King, Oceanfront, High floor.
+          <br />
+          <br /> Club Oceanfront Room, 1 King, Tub with spray jets, Mini fridge,
+          40sqm/430sqft, Living/sitting area, Wireless internet, complimentary,
+          Wired internet, for a fee, Coffee/tea maker.
+        </p>
+      ),
     },
     {
       name: "Club Room King",
@@ -407,9 +709,17 @@ export const habtoorGrand = {
         "/assets/Habtoor Grand/Club Room King/05.jpeg",
         "/assets/Habtoor Grand/Club Room King/06.jpeg",
         "/assets/Habtoor Grand/Club Room King/07.jpeg",
-        "/assets/Habtoor Grand/Club Room King/08.jpeg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Club level, Guest room, 1 King, Partial ocean view, High floor.
+          <br />
+          <br /> Club Room, 1 King, Tub with spray jets, Mini fridge,
+          40sqm/430sqft, Living/sitting area, Wireless internet, complimentary,
+          Wired internet, for a fee, Coffee/tea maker.
+        </p>
+      ),
     },
     {
       name: "Family Suite",
@@ -424,6 +734,13 @@ export const habtoorGrand = {
         "/assets/Habtoor Grand/Family Suite/08.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Tower Family 1 Bedroom Suite, 1 King, Tub with spray jets, Mini
+          fridge, 65sqm/699sqft, Living/sitting area, Wireless internet,
+          complimentary, Wired internet, for a fee, Coffee/tea maker
+        </p>
+      ),
     },
     {
       name: "Resort Garden King",
@@ -433,6 +750,12 @@ export const habtoorGrand = {
         "/assets/Habtoor Grand/Resort Garden King/03.jpeg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          The suite life has different shapes, and ours is round. Sleep in our
+          signature round bed with a separate lounge and bar area.
+        </p>
+      ),
     },
     {
       name: "Tower Family",
@@ -445,6 +768,13 @@ export const habtoorGrand = {
         "/assets/Habtoor Grand/Tower Family/06.jpg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Tower Family Room With Sofa Bed, 2 Twins, Sofa bed, Tub with spray
+          jets, Mini fridge, 50sqm/538sqft, Living/sitting area, Wireless
+          internet, complimentary, Wired internet, for a fee, Coffee/tea maker
+        </p>
+      ),
     },
     {
       name: "Tower Partial Ocean",
@@ -461,6 +791,13 @@ export const habtoorGrand = {
         "/assets/Habtoor Grand/Tower Partial Ocean/10.jpeg",
       ],
       discount: 30,
+      description: (
+        <p className="p-2 text-slate-500 leading-5 font-dmSans text-xs lg:text-[16px]">
+          Tower Oceanfront Room, 1 King, Tub with spray jets, Mini fridge,
+          40sqm/430sqft, Living/sitting area, Wireless internet, complimentary,
+          Wired internet, for a fee, Coffee/tea maker
+        </p>
+      ),
     },
   ],
   gridImages: [
@@ -504,7 +841,7 @@ export const hotelsList = [
   {
     name: "Habtoor Palace",
     benefits: ["Beach Club", "Buffet", "Bar"],
-    image: "/assets/Habtoor Palace/Ambassador suite/01.png",
+    image: "/assets/Habtoor Palace/Ambassador Suite/02.jpg",
     link: "/habtoor-palace",
   },
   {
@@ -549,6 +886,43 @@ function getRandomizedRooms(hotels) {
   return allRooms.sort(() => Math.random() - 0.5);
 }
 
+function getAllRooms(hotels) {
+  const allRooms = hotels.flatMap((hotel) => mergeRooms(hotel));
+  return allRooms;
+}
+
+export async function fetchPricesList(date) {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_PRICES_LIST_GOOGLE_SHEET_URL}?check_out=${date}`
+  );
+  const events = await response.json();
+  return events;
+}
+
+export async function fetchHotelPrices(name, date) {
+  const pricesList = await fetchPricesList(date);
+
+  const filteredHotelPrices = pricesList.filter(
+    (item) => item.HotelName === name
+  );
+  return filteredHotelPrices;
+}
+
+export function filterAndSort(filter, price_from, price_to, objects) {
+  const filteredObjects = objects.filter(
+    (obj) =>
+      obj.DiscountedPrice >= price_from && obj.DiscountedPrice <= price_to
+  );
+
+  if (filter === "low-to-high") {
+    filteredObjects.sort((a, b) => a.DiscountedPrice - b.DiscountedPrice);
+  } else if (filter === "high-to-low") {
+    filteredObjects.sort((a, b) => b.DiscountedPrice - a.DiscountedPrice);
+  }
+
+  return filteredObjects;
+}
+
 export const allHotels = [
   hilton,
   habtoorGrand,
@@ -559,6 +933,15 @@ export const allHotels = [
 ];
 
 export const roomsList = getRandomizedRooms([
+  habtoorPalace,
+  vHotel,
+  habtoorGrand,
+  metropolitanHotel,
+  hilton,
+  theMirage,
+]);
+
+export const allRooms = getAllRooms([
   habtoorPalace,
   vHotel,
   habtoorGrand,
