@@ -39,44 +39,12 @@ export default function Home() {
     endDate: "2024-06-28",
   });
   const sectionRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-  const [hoverImage, setHoverImage] = useState(roomsList[0].images[0]);
   const [contactForm, setContactForm] = useState({
     Name: "",
     Email: "",
     Message: "",
   });
   const [contactFormError, setContactFormError] = useState(false);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    const handleHover = () => {
-      setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-      setIsHovered(false);
-      const randomNumber = generateRandomNumber();
-      setHoverImage(roomsList[randomNumber].images[0]);
-    };
-
-    const section = sectionRef.current;
-    if (section) {
-      section.addEventListener("mouseenter", handleHover);
-      section.addEventListener("mouseleave", handleMouseLeave);
-      section.addEventListener("mousemove", handleMouseMove);
-
-      return () => {
-        section.removeEventListener("mouseenter", handleHover);
-        section.removeEventListener("mouseleave", handleMouseLeave);
-        section.removeEventListener("mousemove", handleMouseMove);
-      };
-    }
-  }, [sectionRef]);
 
   const handleMobileDatePicker = (newmobileDate) => {
     setMobileDate(newmobileDate);
@@ -141,21 +109,6 @@ export default function Home() {
       }, 1500);
     }
   };
-
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-
-  // Update cursor position on mouse move
-  const updateCursorPosition = (e) => {
-    setCursorPosition({ x: e.clientX, y: e.clientY });
-  };
-
-  useEffect(() => {
-    window.addEventListener("mousemove", updateCursorPosition);
-
-    return () => {
-      window.removeEventListener("mousemove", updateCursorPosition);
-    };
-  }, []);
 
   return (
     <div className="w-full min-h-screen">
@@ -337,55 +290,6 @@ export default function Home() {
                 toggleClassName="hidden"
               />
             </span>
-            {/* <span className="w-1/4 mt-2 px-2">
-              <span className="font-dmSans text-[14px] uppercase font-medium text-primaryButton opacity-90">
-                Room Type
-              </span>
-              <div
-                className="w-full dropdown dropdown-hover"
-                onMouseEnter={() => setRoomsDropdownHovered(true)}
-                onMouseLeave={() => setRoomsDropdownHovered(false)}
-              >
-                <div
-                  tabIndex={0}
-                  className="flex items-center gap-x-1 text-left hover:bg-white hover:opacity-80 p-0 bg-white border-0 normal-case shadow-none text-lg font-dmSans font-normal w-fit appearance-none"
-                >
-                  {bookingState.room_type
-                    ? bookingState.room_type
-                    : "Select a room"}
-                  <img
-                    src="/assets/dropdown.svg"
-                    alt="dropdown icon"
-                    className="w-2 h-2 mt-[.5px]"
-                  />
-                </div>
-                {(isRoomsDropdownOpen || roomsDropdownHovered) && (
-                  <ul
-                    tabIndex={0}
-                    id="dropdownContainerDesktop"
-                    className="dropdown-content bg-black text-white border border-neutral-800 z-[1] menu p-2 shadow bg-base-100 rounded-box w-full text-black"
-                  >
-                    {bookingState.hotel ? (
-                      allHotels
-                        .filter((hotel) => hotel.name === bookingState.hotel)[0]
-                        .room_types.map((room) => (
-                          <li
-                            key={room.name}
-                            className="hover:bg-primaryButton rounded-lg font-dmSans p-2"
-                            onClick={() => handleRoom(room.name)}
-                          >
-                            {room.name}
-                          </li>
-                        ))
-                    ) : (
-                      <li className="hover:bg-primaryButton rounded-lg font-dmSans p-2">
-                        Select a hotel
-                      </li>
-                    )}
-                  </ul>
-                )}
-              </div>
-            </span> */}
             <span
               onClick={() => router.push("/hotels-list")}
               className="rounded-full grid place-items-center w-16 h-16 cursor-pointer bg-primaryButton absolute right-[-24px]"
@@ -426,17 +330,6 @@ export default function Home() {
           ref={sectionRef}
           className="hidden relative lg:flex bg-primaryButton bg-opacity-10 lg:flex-col py-12 lg:items-center"
         >
-          {isHovered && (
-            <img
-              src={hoverImage}
-              style={{
-                top: mousePosition.y,
-                left: mousePosition.x,
-                transform: "translate(-50%, -50%)",
-              }}
-              className="fixed pointer-events-none lg:w-[225px] lg:h-[250px] z-10 rounded-lg"
-            />
-          )}
           <h2 className="text-center text-primaryButton font-medium">
             &quot;Once a year, go some place you&apos;ve never been before&quot;{" "}
           </h2>
