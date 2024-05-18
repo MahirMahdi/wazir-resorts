@@ -15,7 +15,7 @@ export default function Checkout() {
     return <p>{content}</p>;
   }
   const initialOptions = {
-    "client-id": "test",
+    "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
     "enable-funding": "",
     "disable-funding": "venmo",
     currency: "GBP",
