@@ -4,20 +4,18 @@ import {
   DetailRoomCard,
   CustomLeftArrow,
   CustomRightArrow,
-  AccordionRoomCard,
   DetailAccordion,
 } from "@/components/cards";
 import FilterBar from "@/components/filterBar";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import MultiRangeSlider from "@/components/slider";
 import Toast from "@/components/toasts";
 import { fetchHotelPrices, filterAndSort, hilton } from "@/data";
 import { useBookingStore } from "@/providers/bookingProvider";
+import img from "next/image";
 import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Datepicker from "react-tailwindcss-datepicker";
 export default function Hilton() {
   const [pricesList, setPricesList] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
@@ -26,18 +24,18 @@ export default function Hilton() {
   const updateBookingStore = useBookingStore(
     (state) => state.updateBookingStore
   );
-  const [date, setDate] = useState({
-    startDate: null,
-    endDate: null,
-  });
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDropdownHovered, setDropdownHovered] = useState(false);
-  const handlePriceSort = (type) => {
-    const newBookingState = { ...bookingState, filter: type };
-    setIsDropdownOpen(false);
-    setDropdownHovered(false);
-    updateBookingStore(newBookingState);
-  };
+  // const [date, setDate] = useState({
+  //   startDate: null,
+  //   endDate: null,
+  // });
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownHovered, setDropdownHovered] = useState(false);
+  // const handlePriceSort = (type) => {
+  //   const newBookingState = { ...bookingState, filter: type };
+  //   setIsDropdownOpen(false);
+  //   setDropdownHovered(false);
+  //   updateBookingStore(newBookingState);
+  // };
   useEffect(() => {
     async function updateHotelPrices() {
       const pricesList = await fetchHotelPrices(
@@ -83,7 +81,11 @@ export default function Hilton() {
       </div>
       {bookingSuccess && <Toast />}
       <section className="w-full py-6 lg:py-8 flex flex-col items-center">
-        <img src={hilton.logo} className="h-20 md:h-24 lg:h-32" />
+        <img
+          alt="hilton-logo"
+          src={hilton.logo}
+          className="h-20 md:h-24 lg:h-32"
+        />
         <p className="mt-4 text-[12px] md:text-[16px] font-dmSans text-center md:w-2/3 lg:w-2/5 font-medium text-slate-700 tracking-normal leading-6">
           {hilton.subheadline}
         </p>

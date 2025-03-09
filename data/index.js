@@ -504,7 +504,7 @@ export const habtoorPalace = {
   gridImages: [
     "/assets/Habtoor-Palace/Grand-Suite/02.jpg",
     "/assets/Habtoor-Palace/Empire-Suite/02.jpg",
-    "/assets/Habtoor-Palace/Duchesse Suite/02.jpg",
+    "/assets/Habtoor-Palace/Duchesse-Suite/02.jpg",
   ],
   subheadline:
     "Habtoor Palace, LXR Hotels & Resorts is situated on the Dubai Water Canal, offering an elegant address with a waterfront theater, boutiques, stylish cafes, and signature restaurants.",
@@ -897,10 +897,231 @@ export async function fetchPricesList(date) {
   const events = await response.json();
   return events;
 }
+export const pricesList = [
+  // Hilton Al Habtoor City
+  {
+    HotelName: "Hilton Al Habtoor City",
+    RoomName: "King Executive Suite",
+    OriginalPrice: 1200,
+    DiscountedPrice: 840,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "Hilton Al Habtoor City",
+    RoomName: "King One-Bedroom Grand Canal",
+    OriginalPrice: 1500,
+    DiscountedPrice: 975,
+    DiscountedRate: 35,
+  },
+  {
+    HotelName: "Hilton Al Habtoor City",
+    RoomName: "King One Bedroom Panoramic View",
+    OriginalPrice: 1300,
+    DiscountedPrice: 910,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "Hilton Al Habtoor City",
+    RoomName: "Junior Suite",
+    OriginalPrice: 1000,
+    DiscountedPrice: 800,
+    DiscountedRate: 20,
+  },
+
+  // The Mirage
+  {
+    HotelName: "The Mirage",
+    RoomName: "Executive Suite",
+    OriginalPrice: 1400,
+    DiscountedPrice: 980,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "The Mirage",
+    RoomName: "Royal Suite",
+    OriginalPrice: 1800,
+    DiscountedPrice: 1170,
+    DiscountedRate: 35,
+  },
+  {
+    HotelName: "The Mirage",
+    RoomName: "Four-Bedroom Villa",
+    OriginalPrice: 2000,
+    DiscountedPrice: 1400,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "The Mirage",
+    RoomName: "Junior Suite",
+    OriginalPrice: 1100,
+    DiscountedPrice: 770,
+    DiscountedRate: 30,
+  },
+
+  // Metropolitan Hotel
+  {
+    HotelName: "Metropolitan Hotel",
+    RoomName: "Ambassador Suite",
+    OriginalPrice: 900,
+    DiscountedPrice: 720,
+    DiscountedRate: 20,
+  },
+  {
+    HotelName: "Metropolitan Hotel",
+    RoomName: "Deluxe Room",
+    OriginalPrice: 700,
+    DiscountedPrice: 560,
+    DiscountedRate: 20,
+  },
+  {
+    HotelName: "Metropolitan Hotel",
+    RoomName: "Deluxe Suite",
+    OriginalPrice: 1000,
+    DiscountedPrice: 800,
+    DiscountedRate: 20,
+  },
+  {
+    HotelName: "Metropolitan Hotel",
+    RoomName: "Family Suite",
+    OriginalPrice: 1100,
+    DiscountedPrice: 880,
+    DiscountedRate: 20,
+  },
+
+  // Habtoor Palace
+  {
+    HotelName: "Habtoor Palace",
+    RoomName: "Ambassador Suite",
+    OriginalPrice: 1600,
+    DiscountedPrice: 1040,
+    DiscountedRate: 35,
+  },
+  {
+    HotelName: "Habtoor Palace",
+    RoomName: "Duchesse Suite",
+    OriginalPrice: 2000,
+    DiscountedPrice: 1300,
+    DiscountedRate: 35,
+  },
+  {
+    HotelName: "Habtoor Palace",
+    RoomName: "Empire Suite",
+    OriginalPrice: 1800,
+    DiscountedPrice: 1170,
+    DiscountedRate: 35,
+  },
+  {
+    HotelName: "Habtoor Palace",
+    RoomName: "Grand Suite",
+    OriginalPrice: 2500,
+    DiscountedPrice: 1500,
+    DiscountedRate: 40,
+  },
+  {
+    HotelName: "Habtoor Palace",
+    RoomName: "Royal Suite",
+    OriginalPrice: 3000,
+    DiscountedPrice: 1650,
+    DiscountedRate: 45,
+  },
+
+  // V Hotel
+  {
+    HotelName: "V Hotel",
+    RoomName: "Deluxe Suite",
+    OriginalPrice: 1100,
+    DiscountedPrice: 880,
+    DiscountedRate: 20,
+  },
+  {
+    HotelName: "V Hotel",
+    RoomName: "Grand Deluxe Suite",
+    OriginalPrice: 1300,
+    DiscountedPrice: 910,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "V Hotel",
+    RoomName: "Penthouse Suite",
+    OriginalPrice: 2000,
+    DiscountedPrice: 1200,
+    DiscountedRate: 40,
+  },
+  {
+    HotelName: "V Hotel",
+    RoomName: "Mega Suite",
+    OriginalPrice: 2200,
+    DiscountedPrice: 1320,
+    DiscountedRate: 40,
+  },
+  {
+    HotelName: "V Hotel",
+    RoomName: "Vibrant Suite",
+    OriginalPrice: 1800,
+    DiscountedPrice: 1080,
+    DiscountedRate: 40,
+  },
+  {
+    HotelName: "V Hotel",
+    RoomName: "Valor Suite",
+    OriginalPrice: 1500,
+    DiscountedPrice: 1050,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "V Hotel",
+    RoomName: "Vantage Suite",
+    OriginalPrice: 1400,
+    DiscountedPrice: 980,
+    DiscountedRate: 30,
+  },
+
+  // Habtoor Grand
+  {
+    HotelName: "Habtoor Grand",
+    RoomName: "Club Oceanfront King",
+    OriginalPrice: 1200,
+    DiscountedPrice: 840,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "Habtoor Grand",
+    RoomName: "Club Room King",
+    OriginalPrice: 1100,
+    DiscountedPrice: 770,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "Habtoor Grand",
+    RoomName: "Family Suite",
+    OriginalPrice: 1300,
+    DiscountedPrice: 910,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "Habtoor Grand",
+    RoomName: "Resort Garden King",
+    OriginalPrice: 1000,
+    DiscountedPrice: 700,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "Habtoor Grand",
+    RoomName: "Tower Family",
+    OriginalPrice: 1400,
+    DiscountedPrice: 980,
+    DiscountedRate: 30,
+  },
+  {
+    HotelName: "Habtoor Grand",
+    RoomName: "Tower Partial Ocean",
+    OriginalPrice: 1500,
+    DiscountedPrice: 1050,
+    DiscountedRate: 30,
+  },
+];
 
 export async function fetchHotelPrices(name, date) {
-  const pricesList = await fetchPricesList(date);
-
   const filteredHotelPrices = pricesList.filter(
     (item) => item.HotelName === name
   );
@@ -910,13 +1131,20 @@ export async function fetchHotelPrices(name, date) {
 export function filterAndSort(filter, price_from, price_to, objects) {
   const filteredObjects = objects.filter(
     (obj) =>
-      obj.DiscountedPrice >= price_from && obj.DiscountedPrice <= price_to
+      Number(obj.DiscountedPrice) >= Number(price_from) &&
+      Number(obj.DiscountedPrice) <= Number(price_to)
   );
+  console.log(objects);
+  console.log(filteredObjects);
 
   if (filter === "low-to-high") {
-    filteredObjects.sort((a, b) => a.DiscountedPrice - b.DiscountedPrice);
+    filteredObjects.sort(
+      (a, b) => Number(a.DiscountedPrice) - Number(b.DiscountedPrice)
+    );
   } else if (filter === "high-to-low") {
-    filteredObjects.sort((a, b) => b.DiscountedPrice - a.DiscountedPrice);
+    filteredObjects.sort(
+      (a, b) => Number(b.DiscountedPrice) - Number(a.DiscountedPrice)
+    );
   }
 
   return filteredObjects;

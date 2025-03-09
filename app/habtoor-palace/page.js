@@ -25,18 +25,18 @@ export default function HabtoorPalace() {
   const updateBookingStore = useBookingStore(
     (state) => state.updateBookingStore
   );
-  const [date, setDate] = useState({
-    startDate: null,
-    endDate: null,
-  });
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDropdownHovered, setDropdownHovered] = useState(false);
-  const handlePriceSort = (type) => {
-    const newBookingState = { ...bookingState, filter: type };
-    setIsDropdownOpen(false);
-    setDropdownHovered(false);
-    updateBookingStore(newBookingState);
-  };
+  // const [date, setDate] = useState({
+  //   startDate: null,
+  //   endDate: null,
+  // });
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownHovered, setDropdownHovered] = useState(false);
+  // const handlePriceSort = (type) => {
+  //   const newBookingState = { ...bookingState, filter: type };
+  //   setIsDropdownOpen(false);
+  //   setDropdownHovered(false);
+  //   updateBookingStore(newBookingState);
+  // };
   useEffect(() => {
     async function updateHotelPrices() {
       const pricesList = await fetchHotelPrices(
@@ -59,14 +59,14 @@ export default function HabtoorPalace() {
     setFilteredList(filteredLists);
   }, [bookingState, pricesList]);
 
-  const handleDate = (date) => {
-    setDate(date);
-    updateBookingStore({
-      ...bookingState,
-      check_in: date.startDate,
-      check_out: date.endDate,
-    });
-  };
+  // const handleDate = (date) => {
+  //   setDate(date);
+  //   updateBookingStore({
+  //     ...bookingState,
+  //     check_in: date.startDate,
+  //     check_out: date.endDate,
+  //   });
+  // };
 
   const handleBookingSucces = () => {
     setBookingSuccess(true);

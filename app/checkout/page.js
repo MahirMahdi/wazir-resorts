@@ -102,16 +102,16 @@ export default function Checkout() {
 
                     const orderData = await response.json();
 
-                    if (orderData.id) {
-                      return orderData.id;
-                    } else {
-                      const errorDetail = orderData?.details?.[0];
+                    if (!orderData.id) {
+                      const errorDetail = orderData.details[0];
                       const errorMessage = errorDetail
                         ? `${errorDetail.issue} ${errorDetail.description} (${orderData.debug_id})`
-                        : JSON.stringify(orderData);
+                        : "Unexpected error occurred, please try again.";
 
                       throw new Error(errorMessage);
                     }
+
+                    return orderData.id;
                   } catch (error) {
                     console.error(error);
                     setMessage(`Could not initiate PayPal Checkout...${error}`);

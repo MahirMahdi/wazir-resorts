@@ -2,13 +2,17 @@
 import Navbar from "@/components/navbar";
 import { phoneCodes } from "@/data/phoneCodes";
 import { useBookingStore } from "@/providers/bookingProvider";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker";
-import { hotels, allHotels, fetchPricesList } from "@/data";
+import {
+  hotels,
+  allHotels,
+  fetchPricesList,
+  pricesList as AllPrices,
+} from "@/data";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/footer";
 import { calculateRoomPrice } from "@/components/cards";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 export default function BookingPage() {
   const router = useRouter();
@@ -20,6 +24,7 @@ export default function BookingPage() {
   const updateItem = useBookingStore((state) => state.updateItem);
   const [isCodesDropdownOpen, setIsCodesDropdownOpen] = useState(false);
   const [codesDropdownHovered, setCodesDropdownHovered] = useState(false);
+  const [pricesList, setPricesList] = useState([]);
   const [bookingFormError, setBookingFormError] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState({
     dialCode: "",
@@ -64,14 +69,13 @@ export default function BookingPage() {
     router.push("/checkout");
   };
 
-  // useEffect(() => {
-  //   async function updateHotelPrices() {
-  //     const pricesList = await fetchPricesList(bookingState.check_out);
-  //     setPricesList(pricesList);
-  //   }
+  useEffect(() => {
+    async function updateHotelPrices() {
+      setPricesList(AllPrices);
+    }
 
-  //   bookingState.check_out && updateHotelPrices();
-  // }, [bookingState.check_out]);
+    bookingState.check_out && updateHotelPrices();
+  }, [bookingState.check_out]);
 
   return (
     <main className="w-full flex flex-col">
@@ -155,10 +159,7 @@ export default function BookingPage() {
                           }}
                           useRange={false}
                           minDate={new Date()}
-                          onChange={async (date) => {
-                            const pricesList = await fetchPricesList(
-                              date.endDate
-                            );
+                          onChange={(date) => {
                             updateItem(i, {
                               ...item,
                               check_in: date.startDate,
@@ -390,10 +391,7 @@ export default function BookingPage() {
                                 }}
                                 useRange={false}
                                 minDate={new Date()}
-                                onChange={async (date) => {
-                                  const pricesList = await fetchPricesList(
-                                    date.endDate
-                                  );
+                                onChange={(date) => {
                                   updateItem(i, {
                                     ...item,
                                     check_in: date.startDate,

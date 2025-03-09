@@ -64,7 +64,7 @@ export default function FilterBar() {
             toggleClassName="absolute right-1 lg:right-4"
           />
           <div className="hidden lg:grid place-items-center lg:w-full">
-            <MultiRangeSlider min={0} max={1000} />
+            <MultiRangeSlider min={0} max={5000} />
           </div>
           <div className="w-max lg:w-2/5 p-2 rounded-lg grid lg:mr-4 place-items-end">
             <div

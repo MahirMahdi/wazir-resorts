@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const runtime = "edge";
 
-const base = "https://api-m.paypal.com";
+const base = "https://api-m.sandbox.paypal.com";
 
 const generateAccessToken = async () => {
   try {
